@@ -1,0 +1,56 @@
+managed implementation in class zbp_i_asset_master unique;
+strict ( 2 );
+
+define behavior for ZI_ASSET_MASTER
+persistent table zasset_master
+lock master
+authorization master ( instance )
+{
+
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( mandatory : create ) AssetId;
+  field ( readonly : update ) AssetId;
+
+  association _Request { create; }
+
+  mapping for zasset_master
+  {
+    AssetId       = asset_id;
+    AssetName     = asset_name;
+    Category      = category;
+    PurchaseDate  = purchase_date;
+    Location      = location;
+    Status        = status;
+  }
+
+}
+
+define behavior for ZI_ASSET_REQUEST
+persistent table zasset_request
+lock dependent by _Asset
+authorization dependent by _Asset
+{
+
+  update;
+  delete;
+
+  field ( mandatory : create ) RequestId;
+
+  field ( readonly )
+    AssetId;
+
+  association _Asset;
+
+  mapping for zasset_request
+  {
+    RequestId      = request_id;
+    AssetId        = asset_id;
+    Priority       = priority;
+    RequestDate    = request_date;
+    RequestStatus  = request_status;
+  }
+
+}

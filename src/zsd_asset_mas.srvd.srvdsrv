@@ -1,0 +1,5 @@
+@EndUserText.label: 'Master Table'
+define service ZSD_ASSET_MAS {
+  expose ZC_ASSET_MASTER;
+  expose ZC_ASSET_REQUEST;
+}

@@ -1,0 +1,53 @@
+@Metadata.layer: #CORE
+annotate view ZC_ASSET_MASTER with
+{
+
+  @UI.facet: [
+    {
+      id: 'GeneralInfo',
+      type: #IDENTIFICATION_REFERENCE,
+      purpose: #STANDARD,
+      label: 'General Information',
+      position: 10
+    },
+    {
+      id: 'MaintenanceRequest',
+      type: #LINEITEM_REFERENCE,
+      purpose: #STANDARD,
+      label: 'Maintenance Requests',
+      position: 20,
+      targetElement: '_Request'
+    }
+  ]
+
+  @EndUserText.label: 'Asset ID'
+  @UI.identification: [{ position: 10, label: 'Asset ID' }]
+  @UI.lineItem: [{ position: 10, label: 'Asset ID' }]
+  AssetId;
+
+  @EndUserText.label: 'Asset Name'
+  @UI.identification: [{ position: 20, label: 'Asset Name' }]
+  @UI.lineItem: [{ position: 20, label: 'Asset Name' }]
+  AssetName;
+
+  @EndUserText.label: 'Category'
+  @UI.identification: [{ position: 30, label: 'Category' }]
+  @UI.lineItem: [{ position: 30, label: 'Category' }]
+  Category;
+
+  @EndUserText.label: 'Purchase Date'
+  @UI.identification: [{ position: 40, label: 'Purchase Date' }]
+  @UI.lineItem: [{ position: 40, label: 'Purchase Date' }]
+  PurchaseDate;
+
+  @EndUserText.label: 'Location'
+  @UI.identification: [{ position: 50, label: 'Location' }]
+  @UI.lineItem: [{ position: 50, label: 'Location' }]
+  Location;
+
+  @EndUserText.label: 'Status'
+  @UI.identification: [{ position: 60, label: 'Status' }]
+  @UI.lineItem: [{ position: 60, label: 'Status' }]
+  Status;
+
+}

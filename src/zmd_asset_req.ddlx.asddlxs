@@ -1,0 +1,40 @@
+@Metadata.layer: #CORE
+annotate view ZC_ASSET_REQUEST with
+{
+
+  @UI.facet: [
+    {
+      id: 'RequestDetails',
+      type: #IDENTIFICATION_REFERENCE,
+      purpose: #STANDARD,
+      label: 'Request Details',
+      position: 10
+    }
+  ]
+
+  @EndUserText.label: 'Request ID'
+  @UI.identification: [{ position: 10, label: 'Request ID' }]
+  @UI.lineItem: [{ position: 10, label: 'Request ID' }]
+  RequestId;
+
+  @EndUserText.label: 'Asset ID'
+  @UI.identification: [{ position: 20, label: 'Asset ID' }]
+  @UI.lineItem: [{ position: 20, label: 'Asset ID' }]
+  AssetId;
+
+  @EndUserText.label: 'Priority'
+  @UI.identification: [{ position: 30, label: 'Priority' }]
+  @UI.lineItem: [{ position: 30, label: 'Priority' }]
+  Priority;
+
+  @EndUserText.label: 'Request Date'
+  @UI.identification: [{ position: 40, label: 'Request Date' }]
+  @UI.lineItem: [{ position: 40, label: 'Request Date' }]
+  RequestDate;
+
+  @EndUserText.label: 'Request Status'
+  @UI.identification: [{ position: 50, label: 'Request Status' }]
+  @UI.lineItem: [{ position: 50, label: 'Request Status' }]
+  RequestStatus;
+
+}

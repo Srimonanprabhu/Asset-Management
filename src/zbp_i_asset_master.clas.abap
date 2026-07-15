@@ -1,0 +1,5 @@
+CLASS zbp_i_asset_master DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_asset_master.
+ENDCLASS.
+
+CLASS zbp_i_asset_master IMPLEMENTATION.
+ENDCLASS.
